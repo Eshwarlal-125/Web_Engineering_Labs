@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout Debug</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            padding: 20px;
+            background: #ddd;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav {
+            display: flex;
+            gap: 20px;
+        }
+
+        .container {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    /* flex-wrap intentionally missing */
+}
+
+        .card {
+            flex: 1;
+            min-width: 250px;
+            padding: 20px;
+            background: #eee;
+            /*position: relative;*/
+        }
+
+        .badge {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: crimson;
+            color: white;
+            padding: 5px 10px;
+        }
+
+        .card img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        footer {
+            padding: 20px;
+            background: #ddd;
+            text-align: center;
+        }
+
+        /* FIX 1: flex-wrap prevents cards from overflowing */
+        .container {
+            flex-wrap: wrap;
+        } 
+
+        /* FIX 2: position: relative makes badge position relative to card */
+        .card {
+            position: relative;
+        }
+
+        /* FIX 3: image stays inside its container */
+        img {
+            max-width: 100%;
+        }
+
+        /* Mobile-first layout */
+        @media (min-width: 640px) {
+            .container {
+                flex-wrap: nowrap;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>My Website</h1>
+
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
+
+    <main class="container">
+
+        <article class="card">
+            <span class="badge">New</span>
+            <h2>Card One</h2>
+            <p>This is the first card.</p>
+            <img src="../images/butterfly.jpg" alt="Sample image">
+        </article>
+
+        <article class="card">
+            <span class="badge">New</span>
+            <h2>Card Two</h2>
+            <p>This is the second card.</p>
+            <img src="../images/butterfly.jpg" alt="Sample image">
+        </article>
+
+        <article class="card">
+            <span class="badge">New</span>
+            <h2>Card Three</h2>
+            <p>This is the third card.</p>
+            <img src="../images/butterfly.jpg" alt="Sample image">
+        </article>
+
+    </main>
+
+    <footer>
+        <p>© 2026 My Website</p>
+    </footer>
+
+</body>
+</html>

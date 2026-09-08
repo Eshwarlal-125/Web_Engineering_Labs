@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Grid gallery</title>
+  <style>
+    body { font-family: system-ui, sans-serif; padding: 1rem; }
+    .photo {
+      background: #ddd;
+      text-align: center;
+      padding: 0;
+    }
+    .gallery {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    }
+    @media (min-width: 640px) {
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 768px) {
+    .gallery {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .gallery {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (min-width: 1280px) {
+    .gallery {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 2rem;
+    }
+}
+
+    img{
+        height: 100px;
+
+width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <h1>Grid gallery</h1>
+  <section class="gallery">
+    <div class="photo">
+      <img src="https://theportablewife.com/wp-content/uploads/best-photo-spots-in-paris-eiffeltower.jpg" alt="paris picture">
+    </div>
+    <div class="photo">
+      <img src="https://theportablewife.com/wp-content/uploads/best-photo-spots-in-paris-eiffeltower.jpg" alt="paris picture">
+    </div>
+    <div class="photo">
+      <img src="https://theportablewife.com/wp-content/uploads/best-photo-spots-in-paris-eiffeltower.jpg" alt="paris picture">
+    </div>
+    <div class="photo">
+      <img src="https://theportablewife.com/wp-content/uploads/best-photo-spots-in-paris-eiffeltower.jpg" alt="paris picture">
+    </div>
+    <div class="photo">
+      <img src="https://theportablewife.com/wp-content/uploads/best-photo-spots-in-paris-eiffeltower.jpg" alt="paris picture">
+    </div>
+    <div class="photo">
+      <img src="https://theportablewife.com/wp-content/uploads/best-photo-spots-in-paris-eiffeltower.jpg" alt="paris picture">
+    </div>
+  </section>
+</body>
+</html>
