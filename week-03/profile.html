@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="This is my profile page.">
+        <title>My Profile</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <!--header-->
+        <header id="home">
+            <h1>Eshwar Lal</h1>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#home">Home</a>
+            <a href="#skills">Skills</a>
+            <a href="#contact">Contact</a>
+            <a href="profile.html">Profile</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        </header>
+        <!--main content-->
+        <main>
+            <article id="about" class="card">
+                <h2>About Me</h2>
+                <p class="muted">I am a computer science student from Khairpur Mir's.</p>
+                <p>This is short introduction about me "I am Eshwar Lal"</p>
+                <p>My hobbies include playing, travelling, and reading.</p>
+                <p>My goal for this course is to become better at web development.</p>
+            </article>
+            <section id="skills">
+                <h2>My Skills</h2>
+                <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                    <li>Machine Learning</li>
+                </ul>
+            </section>
+            <section id="contact">
+                <h2>Contact Me</h2>
+                <!-- form -->
+                <form>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                    <br><br>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    <br><br>
+                    <label for="phone">Phone:</label>
+                    <input type="tel" id="phone" name="phone" required>
+                    <br><br>
+                    <label for="subject">Subject:</label>
+                    <select id="subject" name="subject">
+                        <option value="general">General</option>
+                        <option value="feedback">FeedBack</option>
+                        <option value="question">Question</option>
+                    </select>
+                    <br><br>
+                    <label for="message">Message:</label>
+                    <br>
+                    <textarea id="message" name="message" rows="5" cols="30" required></textarea>
+                    <br><br>
+                    <input type="checkbox" id="agree" name="agree" required>
+                    <label for="agree">I agree to be Contacted.</label>
+                    <br><br>
+                    <button type="submit">Submit</button>
+                </form>
+            </section>
+            <aside>
+                Currently Learning, Web Engineering and Machine Learning.
+            </aside>
+            <figure>
+                <img src="../images/butterfly.jpg" alt="Picure of Butterfly" width="300" height="200">
+                <figcaption>This is the figure caption Scope</figcaption>
+            </figure>
+        </main>
+        <footer>
+            <p>&copy; 2026 Eshwar Lal</p>
+            <a href="mailto:laleshwar35@gmail.com">Email</a>
+            <a href="https://www.google.com" target="_blank" rel="noopener noreferrer">Google</a>
+            <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer">YouTube</a>
+            <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">Facebook</a>
+        </footer>
+    </body>
+</html>
